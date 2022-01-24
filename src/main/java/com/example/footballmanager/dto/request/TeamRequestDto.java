@@ -1,6 +1,7 @@
 package com.example.footballmanager.dto.request;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -17,7 +18,7 @@ public class TeamRequestDto {
     @Min(value = 0)
     @Max(value = 10)
     private Integer transferCosts;
-    private List<Long> playersId;
+    private List<Long> playersId = new ArrayList<>();
     @Min(value = 0)
     private BigDecimal budget;
     private String country;
