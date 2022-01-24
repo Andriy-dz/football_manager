@@ -1,6 +1,7 @@
 package com.example.footballmanager.model;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +28,7 @@ public class Team {
     @JoinTable(name = "teams_players",
             joinColumns = @JoinColumn(name = "team_id"),
             inverseJoinColumns = @JoinColumn(name = "player_id"))
-    private List<Player> players;
+    private List<Player> players = new ArrayList<>();
     private BigDecimal budget;
     private String country;
     private String town;
